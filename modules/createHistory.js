@@ -22,7 +22,7 @@ function locationsAreEqual(a, b) {
 const DefaultKeyLength = 6
 
 function createHistory(options={}) {
-  const { getCurrentLocation, finishTransition, saveState, go, getUserConfirmation } = options
+  const { getCurrentLocation, finishTransition, saveState, go, canGo, getUserConfirmation } = options
   let { keyLength } = options
 
   if (typeof keyLength !== 'number')
@@ -252,6 +252,7 @@ function createHistory(options={}) {
     push,
     replace,
     go,
+    canGo,
     goBack,
     goForward,
     createKey,

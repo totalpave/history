@@ -25,7 +25,8 @@ function createMemoryHistory(options={}) {
     getCurrentLocation,
     finishTransition,
     saveState,
-    go
+    go,
+    canGo
   })
 
   let { entries, current } = options
